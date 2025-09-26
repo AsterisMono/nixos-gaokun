@@ -1,6 +1,13 @@
 {
   description = "NixOS for Huawei Matebook E Go";
 
+  nixConfig = {
+    extra-substituters = [ "https://nvirellia.cachix.org" ];
+    extra-trusted-public-keys = [
+      "nvirellia.cachix.org-1:pl3qPnZsyhpOxIaxPYE1qSHRsfj9g56euaMjw5rtfxY="
+    ];
+  };
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     nixos-generators = {
