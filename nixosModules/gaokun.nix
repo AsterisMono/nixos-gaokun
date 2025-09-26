@@ -42,6 +42,21 @@ in
       "arm64.nopauth"
       "efi=noruntime"
     ];
+    initrd = {
+      includeDefaultModules = false;
+      availableKernelModules = [
+        "i2c-core"
+        "i2c-hid"
+        "i2c-hid-of"
+        "i2c-qcom-geni"
+        "pcie-qcom"
+        "phy-qcom-qmp-combo"
+        "phy-qcom-qmp-pcie"
+        "phy-qcom-qmp-usb"
+        "phy-qcom-snps-femto-v2"
+        "phy-qcom-usb-hs"
+      ];
+    };
   };
 
   networking.networkmanager.enable = true;
