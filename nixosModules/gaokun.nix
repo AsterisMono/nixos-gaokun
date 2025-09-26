@@ -43,6 +43,7 @@ in
       "pd_ignore_unused"
       "arm64.nopauth"
       "efi=noruntime"
+      "nomodeset"
     ];
     initrd = {
       includeDefaultModules = false;
