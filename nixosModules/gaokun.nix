@@ -37,6 +37,7 @@ in
     loader.systemd-boot.enable = true;
     kernelPackages = linuxPackages_gaokun;
     kernelParams = [
+      "console=tty0"
       "clk_ignore_unused"
       "pd_ignore_unused"
       "arm64.nopauth"
