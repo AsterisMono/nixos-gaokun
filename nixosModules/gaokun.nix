@@ -11,6 +11,7 @@ let
     defconfig = "johan_defconfig";
     extraConfig = ''
       CONFIG_FB_SIMPLE y
+      CONFIG_DRM_SIMPLEDRM y
     '';
     ignoreConfigErrors = true;
     src = pkgs.fetchurl {
