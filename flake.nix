@@ -27,6 +27,11 @@
             ./nixosModules/access.nix
             {
               virtualisation.diskSize = 8 * 1024;
+              nixpkgs.config.overlays = [
+                (final: super: {
+                  makeModulesClosure = x: super.makeModulesClosure (x // { allowMissing = true; });
+                })
+              ];
             }
           ];
           format = "raw-efi";
